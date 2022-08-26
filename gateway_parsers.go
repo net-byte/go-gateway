@@ -82,7 +82,7 @@ func parseToWindowsRouteStructIPv6(output []byte) (windowsRouteStructIPv6, error
 			}
 
 			fields := strings.Fields(lines[idx+2])
-			if len(fields) < 5 {
+			if len(fields) < 4 {
 				return windowsRouteStructIPv6{}, errCantParse
 			}
 
