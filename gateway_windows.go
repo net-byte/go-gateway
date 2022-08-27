@@ -21,7 +21,7 @@ func discoverGatewayOSSpecificIPv4() (ip net.IP, err error) {
 }
 
 func discoverGatewayOSSpecificIPv6() (ip net.IP, err error) {
-	routeCmd := exec.Command("route", "print","-6" "::/0")
+	routeCmd := exec.Command("route", "print", "-6", "::/0")
 	routeCmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	output, err := routeCmd.CombinedOutput()
 	if err != nil {
